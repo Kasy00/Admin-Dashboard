@@ -1,2 +1,2 @@
 # Admin-Dashboard
-Creating a admin dashboard to master CSS Grid
+Creating an admin dashboard to master CSS Grid
