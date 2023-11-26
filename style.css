@@ -21,6 +21,11 @@ body{
     height: auto;
 }
 
+.main-btn{
+    width: 2.5rem;
+    height: auto;
+}
+
 .avatars{
     width: 6rem;
     height: auto;
