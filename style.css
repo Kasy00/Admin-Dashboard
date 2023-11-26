@@ -17,13 +17,9 @@ body{
 
 
 .sidebar-btn{
-    width: 4.5rem;
+    max-width: clamp(1rem, 3vw, 4.5rem);
     height: auto;
-}
-
-.main-btn{
-    width: 2.5rem;
-    height: auto;
+    transition: 0.2s ease-in-out;
 }
 
 .avatars{
@@ -71,14 +67,21 @@ ul{
     height: auto;
 }
 
-.sidebar ul li:first-child{
-    font-size: 3.5rem;
-}
-
 .sidebar ul li{
     display: flex;
     align-items: center;
     gap: 2rem;
+    font-size: clamp(1.5rem, 1vw, 2.5rem);
+}
+
+.sidebar ul li:first-child{
+    font-size: clamp(2.5rem, 2vw, 3.5rem);
+    justify-content: center;
+}
+
+.sidebar ul li:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .header{
@@ -134,13 +137,23 @@ button{
 .menu ul li button{
     padding: 1rem;
     width: clamp(50px, 90% + 1rem, 300px);
+    font-weight: bold;
 }
+
+.menu-button:hover{
+    background-color: aquamarine;
+}
+
 
 .main-content{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
     justify-self: center;
+}
+
+.main-content h1{
+    font-size: clamp(1.5rem, 1vw + 2rem, 5rem)
 }
 
 .cards{
@@ -170,14 +183,13 @@ button{
     border-radius: 2rem;
     padding: 0.5rem;
     max-width:900px;
-    justify-content: center;
-    align-content: center;
+    justify-items: center;
+    align-items: center;
     gap: 1rem;
 }
 
 .demo{
-    max-width: 450px;
-    width: 100%;
+    width: 90%;
     height: auto;
 }
 
@@ -229,4 +241,18 @@ button{
 
 .projects, .announcements, .trending{
     padding: 3rem;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.main-btn{
+    width: clamp(2rem, 2vw, 3.5rem);
+    height: auto;
+    grid-auto-flow: column;
+    cursor: pointer;
+}
+
+.main-btn:hover{
+    transform: scale(1.1);
 }
